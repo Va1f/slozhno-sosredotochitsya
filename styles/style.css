@@ -1,5 +1,421 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.header {
+  display: grid;
+  grid-template-rows: 1px 70px 155px 250px 148px;
+}
+
+.container__null::before {
+  content: "REC";
+  position: absolute;
+  top: 12px;
+  width: 33px;
+  height: 26px;
+  margin-left: 290px;
+  color: var(--accent-color);
+}
+
+.container__null::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin-left: 335px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  box-shadow:0px 0px 4px 3px #FF0070;
+  color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.decorated-zone::after,
+.decorated-zone::before {
+  content: "";
+  position: relative;
+  display: block;
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  left: 328px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-content: end;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 1px 13px;
+  color: var(--accent-color);
+  line-height: 18px;
+  background-color: transparent;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.title__main {
+  color: #DB00FF;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: bold;
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__subtitle {
+  font-size: clamp(1.125rem, 1.0823rem + 0.6107vw, 1.375rem);
+}
+
+.title-decor {
+  max-height: 117px;
+  color: #000028;
+  font-weight: bold;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+}
+
 .page {
+  max-width: 375px;
+  min-height: 949px;
+  padding: 10px 10px;
+  font-family: 'IBM Plex mono', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  background-image: url(/images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+  margin-block-start: 40px;
+  font-weight: normal;
+}
+
+.title__subject {
+  padding-block-end: 20px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.text {
+  color: #F1B2CE;
+}
+
+.link__shadow {
+  line-height: 23.4px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.link__shadow:hover {
+  text-decoration: underline;
+  text-decoration-color: #F1B2CE;
+}
+
+.link__shadow:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.list__answers {
+  display: grid;
+  gap: 20px;
+}
+
+.item__answers {
+  display: grid;
+  gap: 10px;
+}
+
+.list__images {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item__images {
+  display: grid;
+}
+
+img {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  gap: 250px;
+  margin-top:40px;
+}
+
+.title__footer {
+  margin: 0 auto;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    display: grid;
+    grid-template-rows: 1px 174px 262px 255px 255px;
+  }
+
+  .header__subtitle {
+    font-size: clamp(1.125rem, 0.375rem + 1.5625vw, 1.375rem);
+  }
+
+  .container__null::before {
+    top: 23px;
+    margin-left: 660px;
+  }
+
+  .container__null::after {
+    top: 29px;
+    margin-left: 709px;
+  }
+
+  .decorated-zone::before {
+    left: 703px;
+  }
+
+  .title__main {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__subtitle {
+    width: 364px;
+    margin-left: 364px;
+  }
+
+  .page {
+    min-width: 768px;
+    min-height: 984px;
+    padding: 20px 20px;
+  }
+
+  .main {
+    gap: 80px;
+    margin-top: 60px;
+  }
+
+  .section__why {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
+  }
+
+  .section__how {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
+  }
+
+  .list__images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 200px 242px 336px;
+    gap: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sunset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .icecream {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .tape {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  } 
+
+  .books {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .street {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 4;
+  }
+
+  .footer {
+    gap: 418px;
+  }
+}
+
+@media (min-width:1024px) {
+
+  .header__theme-menu-list {
+    display: flex;
+    padding-top: 15px;
+  }
+
+  .header__subtitle {
+    height: 71px;
+    font-size: 20px;
+    margin-left: 495px;
+  }
+
+  .header__theme-menu {
+    grid-row-start: 1;
+    padding-right: 380px;
+  }
+
+  .header {
+    display: grid;
+    grid-template-rows: 1px 70px 220px 250px 160px;
+  }
+
+  .container__null::before {
+    top: 37px;
+    margin-left: 920px;
+  }
+
+  .container__null::after {
+    top: 43px;
+    margin-left: 966px;
+  }
+
+  .decorated-zone::before {
+    top: 12px;
+    left: 960px;
+  }
+
+  .title__main {
+    font-size: clamp(9.8125rem, 9.0982rem + 1.1161vw, 10.4375rem);
+    line-height: 82.5%;
+  }
+
+  .page {
+    min-width: 1024px;
+    min-height: 1000Fpx;
+    padding: 20px 20px;
+  }
+
+  .main {
+    gap: 80px;
+    margin-top: 60px;
+  }
+
+  .section__why {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
+  }
+
+  .list__what {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .item__what .title-decor {
+    max-height: 23px;
+  }
+
+  .section__how {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
+  }
+
+  .list__what .item__answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list__images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 260px 315px 428px;
+    gap: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sunset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .icecream {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .tape {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  } 
+
+  .books {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .street {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 4;
+  }
+
+  .footer {
+    gap: 274px;
+    padding: 20px 0;
+  }
 }
