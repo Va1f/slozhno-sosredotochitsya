@@ -5,6 +5,9 @@
 
 :root {
   --accent-color: #ff0070;
-  --accent-color-light: #353430;
-  --main-text: #FFC2E6;
+  --header-text: #DB00FF;
+  --main-text: #F1B2CE;
+  --text-title: #FF0070;
+  --text-subtitle: #000028;
+  --shadow-color: #F1B2CE;
 }
