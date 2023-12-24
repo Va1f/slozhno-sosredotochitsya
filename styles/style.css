@@ -219,7 +219,7 @@
 
 @media (min-width: 768px) {
   .header {
-    grid-template-rows: 174px 290px 238px 280px;
+    grid-template-rows: 174px 290px 240px 280px;
   }
 
   .title__main {
@@ -239,8 +239,8 @@
   }
 
   .main {
-    margin-block-start: 80px;
     gap: 80px;
+    margin-block-start: 80px;
   }
 
   .section__why {
