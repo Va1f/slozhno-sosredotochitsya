@@ -24,53 +24,14 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .theme_light .title__main { 
-    color: var(--text-title); 
-  } 
-   
-  .theme_light .decorated-zone::before { 
-    border-color: var(--accent-color); 
-  } 
-   
-  .theme_light .decorated-zone::after { 
-    border-color: var(--accent-color); 
-  } 
-   
-  .theme_light .container__null::before { 
-    display: none; 
-  } 
-   
-  .theme_light .container__null::after { 
-    display: none; 
-  } 
-   
-  .theme_light .title-decor { 
-    background-color: #FF8DCB; 
-    color: var(--accent-color-light); 
-  } 
-   
-  .theme_light .text { 
-    color: var(--accent-color-light); 
-  } 
-   
-  .theme_light .title__subject { 
-    color: var(--accent-color-light); 
-  } 
-   
-  .theme_light .link__shadow { 
-    text-shadow: 1px 1px 0 #FF8DCB; 
-  } 
-   
-  .theme_light .link__shadow:hover { 
-    text-decoration: underline; 
-    text-decoration-color: #353430;; 
-  } 
-   
-  .theme_light .header__theme-menu-button { 
-    color: var(--accent-color-light); 
-    border-color: var(--accent-color-light); 
-  } 
-
+  .theme_light {
+    --accent-color: #FF8DCB;
+    --header-text: #FFC2E6;
+    --main-text: #353430;
+    --text-title: #353430;
+    --text-subtitle: #353430;
+    --shadow-color: #353430;
+  }
 }
  
 
